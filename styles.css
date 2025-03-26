@@ -140,7 +140,7 @@ button{
 } 
 .img{
   width: 250px;
-  height: 150px;
+  height: 250px;
   border-radius: 60%;
   object-fit: cover;
 }

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Your existing code here
-});
+ 
+
 
 const form = document.getElementById('form')
 const firstname_input = document.getElementById('firstname-input')
@@ -37,6 +37,7 @@ function getSignupFormErrors(firstname, phonenumber, password, repeatPassword){
 
   return errors;
 }
+});
 
 function clickDown() {
   const info = document.getElementById("more-info");
