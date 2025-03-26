@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <title>Angaza</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/assets/angazalogo.png" alt="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#wrapper">Signup</a></li>
+                <li><a href = "tel:+254714094572">Call us</a></li>
+                <li><a href = "mailto:angazaconsult@gmail.com">Email us</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+   <section class="container">
+    <div class = "first">
+        <img class="img" src="/assets/avocados-882635_1280.jpg">
+        <h2>Avocado Program</h2>
+        <button class="btn" onclick="clickDown()">Learn more</button>
+        <div id="more-info">
+            <p>In 2024, we distributed 4,000 Hass avocado seedlings and plan to sell 20,000+ seedlings in 2025. To support value addition, we are investing in a 5MT/day avocado oil processing facility in Kakamega. This initiative will boost farmer incomes, job creation, and agro-industrial growth. To enroll to this program, a member has to pay a membership fee of KSH 500 monthly.</p>
+        </div>
+    </div>
+    </section>
+
+    <section class="container">
+    <div class = "second">
+        <img class="img" src="/assets/soya-bean-4553954_1280.jpg">
+        <h2>Soya Youth Program</h2>
+        <button class="btn" onclick="clickDown1()">Learn more</button>
+        <div id="more-info1">
+            <p>In partnership with the Youth in Sustainable Aquaculture (YISA) program, led by Farm Africa and sponsored by the Mastercard Foundation, Angaza is engaging youth in soybean contract farming. To enroll to this program, a member has to pay a membership fee of KSH 500 monthly.</p>
+        </div>
+    </div>
+    </section>
+
+    <section class="container">
+    <div class = "third">
+        <img class="img" src="/assets/mucuna.png">
+        <h2>Mucuna Loan program</h2>
+        <button class="btn" onclick="clickDown2()">Learn more</button>
+        <div id="more-info2">
+            <p>Angaza is collaborating with the Kenya Industrial Research and Development Institute (KIRDI) and supported by Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH to develop commercial products from the Mucuna pruriens bean. To enroll to this program, a member has to pay a membership fee of KSH 500 monthly.</p>
+        </div>
+    </div>
+   </section >
+    <footer>
+        <nav>
+        <div id ="wrapper">
+            <h2>Sign up</h2>
+            <form>
+                <div>
+                    <label for="fullnames-input">
+                        <img src="/assets/account_circle.svg">
+                    </label>
+                    <input required type="text" name="fullnames" id="fullnames-input" placeholder="Fullnames">
+                </div>
+                <div>
+                    <label for="phonenumber-input">
+                        <img src="/assets/call.svg">
+                    </label>
+                    <input required type="number" name="Phone number" id="phonenumber-input" placeholder="Phonenumber">
+                </div>
+                <div>
+                    <label for="program-input">
+                        <img src="/assets/lists.svg">
+                    </label>
+                    <input required type="text" name="program" id="program-input" placeholder="Program choosen">
+                </div>
+                <div>
+                    <label for="location-input">
+                        <img src="/assets/add_location.svg">
+                    </label>
+                    <input required type="text" name="location" id="location-input" placeholder="Location">
+                </div>
+                <div>
+                    <label for="password-input">
+                        <img src="/assets/lock_open.svg">
+                    </label>
+                    <input required type="password" name="password" id="password-input" placeholder="Password">
+                </div>
+                <div>
+                    <label for="repeat-password-input">
+                        <img src="/assets/lock.svg">
+                    </label>
+                    <input required type="password" name="repeat-password" id="repeat-password-input" placeholder="Repeat password">
+                </div>
+                <button type="submit">Proceed for membership</button>
+            </form>
+        </nav>
+    
+           
+        
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
