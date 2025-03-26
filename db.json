@@ -8,30 +8,5 @@
         "location": "Nairobi",
         "password": "hashed_password"
       },
-      {
-        "id": 2,
-        "fullnames": "Jeannette Derek",
-        "phoneNumber": "111",
-        "program": "Angaza Program",
-        "location": "Nairobi",
-        "password": "hashed_password"
-      },
-      {
-        "id": 2,
-        "fullnames": "Alicia Marie",
-        "phoneNumber": "222",
-        "program": "Angaza Program",
-        "location": "Nairobi",
-        "password": "hashed_password"
-      },
-      {
-        "id": 2,
-        "fullnames": "Niki achieng",
-        "phoneNumber": "444",
-        "program": "Soya Youth Program",
-        "location": "Nairobi",
-        "password": "hashed_password"
-      }
-    ]
-  }
+   
   
