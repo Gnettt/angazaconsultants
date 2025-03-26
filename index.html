@@ -19,43 +19,73 @@
             </div>
         </nav>
     </header>
+    <section class="container1">
+        <div class = "initial">
+            <img id="img" src="/assets/angazalogo.png">
+            <h1>Welcome to Angaza Consultants</h1>
+            <p>We are a for-profit social enterprise based in Kenya, committed to creating pathways to prosperity for rural farm families. Our mission is rooted in the belief that market access and the introduction of high-value agricultural products can profoundly</p>
+            <p>transform the lives of smallholder farmers—especially youth and women—who often face significant barriers to accessing lucrative markets.By integrating small-scale machinery, advanced technology, and improved farming practices, we aim to reduce the </p>
+            <p>overall cost of farming while maximizing yields and profits. Our approach begins with understanding market demands and guiding farmers and value chain actors to align with market-ready value chains. While this may require a shift from traditional </p>
+            <p>practices, the promise of increased returns has steadily driven higher adoption rates among farmers, ensuring a gradual and sustainable transformation. </p>
+           
+        </div>
+     </section>
+     <br>
+     <section class="container1">
+        <div class = "initial">
+            <h1>Our Products</h1>
+            <p>Angaza Consultants offers contract farming, empowering rural farmers with inputs, training,  market access,  </p>
+            <p>and sustainable practices for increased incomes. </p>
+            <h3>We offer:</h3>
+            <ul>
+                <li><a href="#first">Avacado Program</a></li>
+                <li><a href="#second">Soya Program</a></li>
+                <li><a href="#third">Mucuna Loan Program</a></li>
+            </ul>
+        </div>
+     </section>
    <section class="container">
-    <div class = "first">
+    <div id = "first">
         <img class="img" src="/assets/avocados-882635_1280.jpg">
         <h2>Avocado Program</h2>
         <button class="btn" onclick="clickDown()">Learn more</button>
         <div id="more-info">
             <p>In 2024, we distributed 4,000 Hass avocado seedlings and plan to sell 20,000+ seedlings in 2025. To support value addition, we are investing in a 5MT/day avocado oil processing facility in Kakamega. This initiative will boost farmer incomes, job creation, and agro-industrial growth. To enroll to this program, a member has to pay a membership fee of KSH 500 monthly.</p>
+            <button class="subscribe">Subscribe to this program</button>
         </div>
     </div>
     </section>
 
     <section class="container">
-    <div class = "second">
+    <div id = "second">
         <img class="img" src="/assets/soya-bean-4553954_1280.jpg">
         <h2>Soya Youth Program</h2>
         <button class="btn" onclick="clickDown1()">Learn more</button>
         <div id="more-info1">
             <p>In partnership with the Youth in Sustainable Aquaculture (YISA) program, led by Farm Africa and sponsored by the Mastercard Foundation, Angaza is engaging youth in soybean contract farming. To enroll to this program, a member has to pay a membership fee of KSH 500 monthly.</p>
+            <button class="subscribe">Subscribe to this program</button>
         </div>
     </div>
     </section>
 
     <section class="container">
-    <div class = "third">
-        <img class="img" src="/assets/mucuna.png">
-        <h2>Mucuna Loan program</h2>
-        <button class="btn" onclick="clickDown2()">Learn more</button>
-        <div id="more-info2">
-            <p>Angaza is collaborating with the Kenya Industrial Research and Development Institute (KIRDI) and supported by Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH to develop commercial products from the Mucuna pruriens bean. To enroll to this program, a member has to pay a membership fee of KSH 500 monthly.</p>
+        <div id = "third">
+            <img class="img" src="/assets/mucuna.png">
+            <h2>Mucuna Loan program</h2>
+            <button class="btn" onclick="clickDown2()">Learn more</button>
+            <div id="more-info2">
+                <p>Angaza is collaborating with the Kenya Industrial Research and Development Institute (KIRDI) and supported by Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH to develop commercial products from the Mucuna pruriens bean. To enroll to this program, a member has to pay a membership fee of KSH 500 monthly.</p>
+                <button class="subscribe">Subscribe to this program</button>
+            </div>
         </div>
-    </div>
-   </section >
+       </section >
+
     <footer>
         <nav>
         <div id ="wrapper">
             <h2>Sign up</h2>
-            <form>
+            <form id="updateForm">
+                <input type="hidden" id="userId" value="1"> 
                 <div>
                     <label for="fullnames-input">
                         <img src="/assets/account_circle.svg">
@@ -92,7 +122,7 @@
                     </label>
                     <input required type="password" name="repeat-password" id="repeat-password-input" placeholder="Repeat password">
                 </div>
-                <button type="submit">Proceed for membership</button>
+                <button type="submit" class="membership">Proceed for membership</button>
             </form>
         </nav>
     

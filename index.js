@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Your existing code here
+});
+
 const form = document.getElementById('form')
 const firstname_input = document.getElementById('firstname-input')
 const phonenumber_input = document.getElementById('phonenumber-input')
@@ -42,6 +46,7 @@ function clickDown() {
       info.style.display = "none";
   }
 }
+
 function clickDown1() {
   const info = document.getElementById("more-info1");
   if (info.style.display === "none" || info.style.display === "") {
@@ -59,3 +64,23 @@ function clickDown2() {
   }
 }
 
+document.getElementById("updateForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const userId = document.getElementById("userId").value;
+    const updatedUser = {
+        fullnames: document.getElementById("fullnames").value,
+        phoneNumber: document.getElementById("phoneNumber").value,
+        program: document.getElementById("program").value,
+        location: document.getElementById("location").value
+    };
+
+    fetch(`http://localhost:3000/users/${userId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedUser)
+    })
+    .then(response => response.json())
+    .then(data => alert("User updated successfully!"))
+    .catch(error => console.error("Error:", error));
+  });

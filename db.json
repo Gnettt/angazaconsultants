@@ -1,0 +1,37 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "fullnames": "Kendrick musalia",
+        "phoneNumber": "000",
+        "program": "Mucuna Loan Program",
+        "location": "Nairobi",
+        "password": "hashed_password"
+      },
+      {
+        "id": 2,
+        "fullnames": "Jeannette Derek",
+        "phoneNumber": "111",
+        "program": "Angaza Program",
+        "location": "Nairobi",
+        "password": "hashed_password"
+      },
+      {
+        "id": 2,
+        "fullnames": "Alicia Marie",
+        "phoneNumber": "222",
+        "program": "Angaza Program",
+        "location": "Nairobi",
+        "password": "hashed_password"
+      },
+      {
+        "id": 2,
+        "fullnames": "Niki achieng",
+        "phoneNumber": "444",
+        "program": "Soya Youth Program",
+        "location": "Nairobi",
+        "password": "hashed_password"
+      }
+    ]
+  }
+  
