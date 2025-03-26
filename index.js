@@ -74,5 +74,13 @@ document.getElementById("updateForm").addEventListener("submit", function(event)
         program: document.getElementById("program").value,
         location: document.getElementById("location").value
     };
-
+    fetch(`http://localhost:3000/users/${userId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedUser)
+    })
+    .then(response => response.json())
+    .then(data => alert("User updated successfully!"))
+    .catch(error => console.error("Error:", error));
+  });
    
