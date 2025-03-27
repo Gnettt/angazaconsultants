@@ -161,4 +161,12 @@ h1{
   width: 200px;
   height: 130px;
 }
-
+.container1 {
+  width: 80%; 
+  max-width: 1200px; 
+  margin: 20px auto; 
+  padding: 20px;
+  background-color: #ffffff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px #9c99991a; 
+}
