@@ -78,13 +78,4 @@ document.getElementById("updateForm").addEventListener("submit", function(event)
     .catch(error => console.error("Error:", error));
     
   
-document.getElementById("updateForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-const formData = {
-    userId,
-    fullnames,
-    phoneNumber,
-    location,
-    password,
-    program
-};
+});
