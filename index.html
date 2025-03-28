@@ -138,12 +138,6 @@
                     <input required type="number" name="Phone number" id="phonenumber-input" placeholder="Phonenumber">
                 </div>
                 <div>
-                    <label for="location-input">
-                        <img src="/assets/add_location.svg">
-                    </label>
-                    <input required type="text" name="location" id="location-input" placeholder="Location">
-                </div>
-                <div>
                     <label for="password-input">
                         <img src="/assets/lock_open.svg">
                     </label>
@@ -154,6 +148,13 @@
                         <img src="/assets/lock.svg">
                     </label>
                     <input required type="password" name="repeat-password" id="repeat-password-input" placeholder="Repeat password">
+                </div>
+                <div>
+                    <input required type="text" name="location" id="location-input" placeholder="Location">
+                    <h2>Your Location:</h2>
+                    <ul>
+                        <li><strong>City:</strong> <span id="city">Loading...</span></li>
+                    </ul>
                 </div>
                 <div>
                     <label for="program">

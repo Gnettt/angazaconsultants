@@ -30,6 +30,7 @@ function getSignupFormErrors(firstname, phonenumber, password, repeatPassword){
 
   return errors;
 }
+
 function clickDown() {
     const info = document.getElementById("more-info");
     if (info.style.display === "none" || info.style.display === "") {
@@ -72,7 +73,7 @@ document.getElementById("updateForm").addEventListener("submit", function(event)
 fetch("/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(UpdatedUser)
     })
     .then(response => response.json())
     .then(data => console.log("Success:", data))
@@ -81,3 +82,40 @@ fetch("/submit", {
   
 })
 });
+
+function getUserLocation() {
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+
+                document.getElementById("latitude").textContent = latitude;
+                document.getElementById("longitude").textContent = longitude;
+
+                fetchAddress(latitude, longitude);
+            },
+            function (error) {
+                console.error("Error getting location:", error.message);
+                document.getElementById("address").textContent = "Unable to get location.";
+            }
+        );
+    } else {
+        console.error("Geolocation is not supported by this browser.");
+        document.getElementById("address").textContent = "Geolocation not supported.";
+    }
+}
+
+unction getCurrentCity() {
+    navigator.geolocation.getCurrentPosition(position => {
+        fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${position.coords.latitude}&lon=${position.coords.longitude}`)
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("city").textContent = data.address.city || data.address.town || data.address.village || "City not found";
+            })
+            .catch(() => document.getElementById("city").textContent = "Error fetching city.");
+    }, 
+    () => document.getElementById("city").textContent = "Location access denied.");
+}
+
+getCurrentCity();
