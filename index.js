@@ -30,32 +30,32 @@ function getSignupFormErrors(firstname, phonenumber, password, repeatPassword){
 
   return errors;
 }
-
 function clickDown() {
-  const info = document.getElementById("more-info");
-  if (info.style.display === "none" || info.style.display === "") {
-      info.style.display = "block";
-  } else {
-      info.style.display = "none";
+    const info = document.getElementById("more-info");
+    if (info.style.display === "none" || info.style.display === "") {
+        info.style.display = "block";
+    } else {
+        info.style.display = "none";
+    }
   }
-}
-
-function clickDown1() {
-  const info = document.getElementById("more-info1");
-  if (info.style.display === "none" || info.style.display === "") {
-      info.style.display = "block";
-  } else {
-      info.style.display = "none";
+  
+  function clickDown1() {
+    const info = document.getElementById("more-info1");
+    if (info.style.display === "none" || info.style.display === "") {
+        info.style.display = "block";
+    } else {
+        info.style.display = "none";
+    }
   }
-}
-function clickDown2() {
-  const info = document.getElementById("more-info2");
-  if (info.style.display === "none" || info.style.display === "") {
-      info.style.display = "block";
-  } else {
-      info.style.display = "none";
+  function clickDown2() {
+    const info = document.getElementById("more-info2");
+    if (info.style.display === "none" || info.style.display === "") {
+        info.style.display = "block";
+    } else {
+        info.style.display = "none";
+    }
   }
-}
+  
 document.getElementById("updateForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -68,7 +68,7 @@ document.getElementById("updateForm").addEventListener("submit", function(event)
 
     };
    
-    fetch("/submit", {
+fetch("/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
@@ -78,5 +78,5 @@ document.getElementById("updateForm").addEventListener("submit", function(event)
     .catch(error => console.error("Error:", error));
     
   
-}
+})
 });
