@@ -1,13 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
  
-
-
-const form = document.getElementById('form')
 const firstname_input = document.getElementById('firstname-input')
 const phonenumber_input = document.getElementById('phonenumber-input')
 const password_input = document.getElementById('password-input')
 const repeat_password_input = document.getElementById('repeat-password-input')
-const error_message = document.getElementById('error-message')
 
 function getSignupFormErrors(firstname, phonenumber, password, repeatPassword){
   let errors = []
@@ -24,10 +20,7 @@ function getSignupFormErrors(firstname, phonenumber, password, repeatPassword){
     errors.push('Password is required')
     password_input.parentElement.classList.add('incorrect')
   }
-  if(password.length < 8){
-    errors.push('Password must have at least 8 characters')
-    password_input.parentElement.classList.add('incorrect')
-  }
+
   if(password !== repeatPassword){
     errors.push('Password does not match repeated password')
     password_input.parentElement.classList.add('incorrect')
@@ -64,7 +57,6 @@ function clickDown2() {
       info.style.display = "none";
   }
 }
-
 document.getElementById("updateForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -74,14 +66,26 @@ document.getElementById("updateForm").addEventListener("submit", function(event)
         phoneNumber: document.getElementById("phoneNumber").value,
         program: document.getElementById("program").value,
         location: document.getElementById("location").value
+
     };
-    fetch(`http://localhost:3000/users/${userId}`, {
-        method: "PUT",
+   
+    fetch("/submit", {
+        method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updatedUser)
+        body: JSON.stringify(formData)
     })
     .then(response => response.json())
-    .then(data => alert("User updated successfully!"))
+    .then(data => console.log("Success:", data))
     .catch(error => console.error("Error:", error));
-  });
-   
+    
+  
+document.getElementById("updateForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+const formData = {
+    userId,
+    fullnames,
+    phoneNumber,
+    location,
+    password,
+    program
+};

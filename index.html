@@ -138,12 +138,6 @@
                     <input required type="number" name="Phone number" id="phonenumber-input" placeholder="Phonenumber">
                 </div>
                 <div>
-                    <label for="program-input">
-                        <img src="/assets/lists.svg">
-                    </label>
-                    <input required type="text" name="program" id="program-input" placeholder="Program choosen">
-                </div>
-                <div>
                     <label for="location-input">
                         <img src="/assets/add_location.svg">
                     </label>
@@ -161,7 +155,18 @@
                     </label>
                     <input required type="password" name="repeat-password" id="repeat-password-input" placeholder="Repeat password">
                 </div>
-                <button type="submit" class="membership">Proceed for membership</button>
+                <div>
+                    <label for="program">
+                        <img src="/assets/lists.svg">
+                    </label>
+                <select id="program">
+                    <option value="basic">Angaza Program</option>
+                    <option value="premium">Soya Youth Program</option>
+                    <option value="vip">Mucuna Loan program</option>
+                </select><br><br>
+                <button type="submit" class="membership" onclick="registerMembership()">Register</button>
+                <p id="message"></p>
+                </div>
             </form>
         </nav>
     </footer>
