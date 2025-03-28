@@ -78,4 +78,5 @@ document.getElementById("updateForm").addEventListener("submit", function(event)
     .catch(error => console.error("Error:", error));
     
   
+}
 });
