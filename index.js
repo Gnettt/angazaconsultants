@@ -42,19 +42,20 @@ function clickDown() {
   function clickDown1() {
     const info = document.getElementById("more-info1");
     if (info.style.display === "none" || info.style.display === "") {
-        info.style.display = "block";
-    } else {
         info.style.display = "none";
+    } else {
+        info.style.display = "block";
     }
   }
   function clickDown2() {
     const info = document.getElementById("more-info2");
     if (info.style.display === "none" || info.style.display === "") {
-        info.style.display = "block";
-    } else {
         info.style.display = "none";
+    } else {
+        info.style.display = "block";
     }
   }
+
 
 document.getElementById("updateForm").addEventListener("submit", function(event) {
     event.preventDefault();
