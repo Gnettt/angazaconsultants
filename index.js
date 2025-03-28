@@ -106,7 +106,7 @@ function getUserLocation() {
     }
 }
 
-unction getCurrentCity() {
+function getCurrentCity() {
     navigator.geolocation.getCurrentPosition(position => {
         fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${position.coords.latitude}&lon=${position.coords.longitude}`)
             .then(res => res.json())
