@@ -30,7 +30,6 @@ function getSignupFormErrors(firstname, phonenumber, password, repeatPassword){
 
   return errors;
 }
-});
 
 function clickDown() {
   const info = document.getElementById("more-info");
