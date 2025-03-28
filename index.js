@@ -55,7 +55,7 @@ function clickDown() {
         info.style.display = "none";
     }
   }
-  
+
 document.getElementById("updateForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
