@@ -11,3 +11,216 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --accent-color: #316c21;
+  --base-color: #ffffff;
+  --text-color: #000000;
+  --input-color: #f3fff7;
+  --button-color: #56c737;
+  --button-hover: #4c8632;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Poppins, 'Segoe UI', Geneva;
+  font-size: 12px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+header {
+  background-color: rgb(53, 93, 55);
+  border-bottom: 1.5px solid #454545;
+}
+
+header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: rgb(53, 93, 55);
+  color: var(--base-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+form>div {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+footer .wrapper {
+  height: 100vh;
+  width: max(40%, 600px);
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form label {
+  flex-shrink: 0;
+  height: 50px;
+  width: 50px;
+  background-color: var(--button-color);
+  fill: var(--base-color);
+  color: var(--base-color);
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+form input {
+  box-sizing: border-box;
+  flex-grow: 1;
+  min-width: 0;
+  height: 50px;
+  padding: 1em;
+  font: inherit;
+  border-radius: 0 10px 10px 0;
+  border: 2px solid var(--input-color);
+  border-left: none;
+  background-color: var(--input-color);
+  transition: 150ms ease;
+}
+
+form input:hover {
+  border-color: var(--accent-color);
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--text-color);
+}
+
+div:has(input:focus)>label {
+  background-color: var(--text-color);
+}
+
+form input::placeholder {
+  color: var(--text-color);
+}
+
+form button {
+  margin-top: 10px;
+  border: none;
+  border-radius: 1000px;
+  padding: .85em 4em;
+  background-color: var(--button-color);
+  color: var(--base-color);
+  font: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 150ms ease;
+}
+
+form button:hover {
+  background-color: var(--text-color);
+}
+
+form button:focus {
+  outline: none;
+  background-color: var(--text-color);
+}
+
+button {
+  margin-top: 10px;
+  border: none;
+  border-radius: 1000px;
+  padding: .85em 4em;
+  background-color: var(--button-color);
+  color: var(--base-color);
+  font: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.img {
+  width: 250px;
+  height: 250px;
+  border-radius: 60%;
+  object-fit: cover;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+#img {
+  width: 200px;
+  height: 130px;
+}
+
+.container1 {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #9c99991a;
+}
+
+form select {
+  box-sizing: border-box;
+  flex-grow: 1;
+  min-width: 0;
+  height: 50px;
+  padding: 1em;
+  font: inherit;
+  border-radius: 0 10px 10px 0;
+  border: 2px solid var(--input-color);
+  border-left: none;
+  background-color: var(--input-color);
+  transition: 150ms ease;
+}

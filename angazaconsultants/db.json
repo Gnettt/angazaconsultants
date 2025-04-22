@@ -1,4 +1,5 @@
 {
+    "users": [],
     "programs": [
       {
         "name": "Mucuna Loan Program",
@@ -8,7 +9,7 @@
         "endDate": "2025-12-31"
       },
         {
-        "name": "Avacado Program",
+        "name": "Avocado Program",
         "description": "Angaza Consultants is transforming avocado farming in Western Kenya by creating sustainable market access for farmers. In 2024, we distributed 4,000 Hass avocado seedlings and plan to sell 20,000+ seedlings in 2025. To support value addition, we are investing in an avocado oil processing facility. This initiative will boost farmer incomes, job creation, and agro-industrial growth. Additionally, byproducts will be converted into organic fertilizer and black soldier fly larvae for animal feed, promoting sustainability. Through training, partnerships, and agribusiness linkages, Angaza aims to establish Western Kenya as a leading avocado production hub.",
         "location": "Nairobi",
         "startDate": "2025-01-01",
