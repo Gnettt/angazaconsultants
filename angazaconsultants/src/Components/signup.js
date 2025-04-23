@@ -33,7 +33,7 @@ const Signup = () => {
       return;
     }
     console.log('Submitted:', form);
-    fetch('http://localhost:8000/signup', {
+    fetch('http://localhost:8000/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -61,7 +61,7 @@ const Signup = () => {
       <select name="program" onChange={handleChange} value={form.program}>
         <option >Angaza Program</option>
         <option >Soya Youth Program</option>
-        <option >Mucuna Loan Program</option>
+        <option >Mucuna Program</option>
       </select>
       <button type="submit">Register</button>
     </form>

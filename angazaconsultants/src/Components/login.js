@@ -13,7 +13,7 @@ const Login = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    fetch('http://localhost:8000/login', {
+    fetch('http://localhost:8000/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
