@@ -1,3 +1,5 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 .App {
   text-align: center;
 }
@@ -51,17 +53,8 @@
   padding: 0;
 }
 
-html {
-  font-family: Poppins, 'Segoe UI', Geneva;
-  font-size: 12px;
-  color: var(--text-color);
-  text-align: center;
-}
 
-header {
-  background-color: rgb(53, 93, 55);
-  border-bottom: 1.5px solid #454545;
-}
+
 
 header img {
   width: 60px;
@@ -83,14 +76,6 @@ nav ul {
   gap: 20px;
 }
 
-a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-a:hover {
-  text-decoration: underline;
-}
 
 footer {
   background-color: rgb(53, 93, 55);
@@ -205,15 +190,9 @@ button {
   border-radius: 60%;
   object-fit: cover;
 }
-
-.container {
-  width: 80%;
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 h1 {
@@ -221,20 +200,6 @@ h1 {
   text-transform: uppercase;
 }
 
-#img {
-  width: 200px;
-  height: 130px;
-}
-
-.container1 {
-  width: 80%;
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px #9c99991a;
-}
 
 form select {
   box-sizing: border-box;
@@ -271,3 +236,4 @@ form select {
   border-radius: 8px;
   margin-bottom: 10px;
 }
+
