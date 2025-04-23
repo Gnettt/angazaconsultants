@@ -13,7 +13,7 @@ function Program() {
   return (
     <div className="p-4 grid gap-4">
       {programs.map((program, index) => (
-        <div key={index} style={{ border: "10px solid #ccc", padding: "20px", marginBottom: "20px", borderRadius: "8px" }} className="bg-white shadow-md rounded-lg p-4">
+        <div key={index} style={{ border: "5px solid #ccc", padding: "20px", marginBottom: "20px", borderRadius: "8px" }} className="bg-white shadow-md rounded-lg p-4">
          <img src={program.avatar} alt={program.name} className="program-avatar" style={{ width: "auto" }} />
           <h2 className="text-xl font-bold">{program.name}</h2>
           <p className="text-sm text-gray-500">{program.location}</p>
