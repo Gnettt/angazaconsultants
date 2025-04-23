@@ -1,6 +1,6 @@
 import { useEffect, useState} from 'react';
 
-function ProgramList() {
+function Program() {
   const [programs, setPrograms] = useState([]);
 
   useEffect(() => {
@@ -13,8 +13,8 @@ function ProgramList() {
   return (
     <div className="p-4 grid gap-4">
       {programs.map((program, index) => (
-        <div key={index} className="border rounded-lg shadow p-4">
-         <img src={program.avatar} alt={program.name} className="program-avatar" />
+        <div key={index} style={{ border: "10px solid #ccc", padding: "20px", marginBottom: "20px", borderRadius: "8px" }} className="bg-white shadow-md rounded-lg p-4">
+         <img src={program.avatar} alt={program.name} className="program-avatar" style={{ width: "auto" }} />
           <h2 className="text-xl font-bold">{program.name}</h2>
           <p className="text-sm text-gray-500">{program.location}</p>
           <p className="mt-2">{program.description}</p>
@@ -27,4 +27,4 @@ function ProgramList() {
   );
 }
 
-export default ProgramList;
+export default Program;
