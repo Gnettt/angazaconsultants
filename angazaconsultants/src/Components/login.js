@@ -36,9 +36,12 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="container mt-4" >
+     <div className="mb-3"></div>
       <input 
         name="fullnames" 
+        className="form-control"
+        type="text"
         placeholder="Fullnames" 
         onChange={handleChange} 
         value={form.fullnames} 
@@ -48,6 +51,8 @@ const Login = () => {
         name="password" 
         type="password" 
         placeholder="Password" 
+        className="form-control"
+
         onChange={handleChange} 
         value={form.password} 
         required 

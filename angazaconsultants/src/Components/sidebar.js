@@ -10,17 +10,22 @@ const Sidebar = ({ onProgramSelect }) => {
       .catch(err => console.error("Error fetching programs:", err));
   }, []);
 
-  return (
-    <div style={{ width: "200px", borderRight: "1px solid #ccc", padding: "10px" }}>
-      <h1>Programs</h1>
-      <ul style={{ listStyleType: "none", padding: 0 }}>
+   return (
+    <div className="bg-light p-3" style={{ width: "250px", borderRight: "1px solid #ccc" }}>
+      <h4 className="mb-3">Programs</h4>
+      <ul className="list-unstyled">
         {programs.map((program, index) => (
           <li
             key={index}
-            style={{ cursor: "pointer", marginBottom: "8px", color: "black",  fontWeight: "bold"}}
-            onClick={() => onProgramSelect(program)}
+            className="nav-item"
+            style={{ cursor: "pointer", marginBottom: "0.5rem" }}
           >
-            {program.name}
+            <button
+              className="nav-link text-dark fw-bold p-0"
+              onClick={() => onProgramSelect(program)}
+            >
+              {program.name}
+            </button>
           </li>
         ))}
       </ul>

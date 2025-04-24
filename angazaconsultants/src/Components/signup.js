@@ -64,78 +64,88 @@ const Signup = () => {
       .catch((err) => console.error('Error:', err));
   };
 
-  return (
-    <div className="min-h-screen bg-white text-[#316c21] p-6">
-      <div className="max-w-3xl mx-auto bg-gray-50 p-8 rounded-2xl shadow-md">
-        
+   return (
+    <div className="min-vh-100 bg-light text-success py-5">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-md-8 col-lg-6 bg-white p-4 rounded shadow">
+            <h2 className="mb-4">Sign Up for a Program</h2>
+            <form onSubmit={handleSubmit} className="row g-3">
+              <div className="col-12">
+                <input
+                  type="text"
+                  className="form-control"
+                  name="fullnames"
+                  placeholder="Fullnames"
+                  onChange={handleChange}
+                  value={form.fullnames}
+                  required
+                />
+              </div>
+              <div className="col-12">
+                <input
+                  type="tel"
+                  className="form-control"
+                  name="phonenumber"
+                  placeholder="Phone number"
+                  onChange={handleChange}
+                  value={form.phonenumber}
+                  required
+                />
+              </div>
+              <div className="col-12">
+                <input
+                  type="password"
+                  className="form-control"
+                  name="password"
+                  placeholder="Password"
+                  onChange={handleChange}
+                  value={form.password}
+                  required
+                />
+              </div>
+              <div className="col-12">
+                <input
+                  type="password"
+                  className="form-control"
+                  name="repeatPassword"
+                  placeholder="Repeat password"
+                  onChange={handleChange}
+                  value={form.repeatPassword}
+                  required
+                />
+              </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="grid grid-cols-1 gap-4"
-        >
-          <input
-            className="w-full p-2 border rounded"
-            name="fullnames"
-            placeholder="Fullnames"
-            onChange={handleChange}
-            value={form.fullnames}
-            required
-          />
-          <input
-            className="w-full p-2 border rounded"
-            name="phonenumber"
-            placeholder="Phone number"
-            onChange={handleChange}
-            value={form.phonenumber}
-            required
-          />
-          <input
-            className="w-full p-2 border rounded"
-            name="password"
-            type="password"
-            placeholder="Password"
-            onChange={handleChange}
-            value={form.password}
-            required
-          />
-          <input
-            className="w-full p-2 border rounded"
-            name="repeatPassword"
-            type="password"
-            placeholder="Repeat password"
-            onChange={handleChange}
-            value={form.repeatPassword}
-            required
-          />
+              <div className="col-12 text-muted small">
+                City: {form.city}
+              </div>
 
-          <div className="text-sm text-gray-600">
-            City: {form.city}
+              <div className="col-12">
+                <select
+                  className="form-select"
+                  name="program"
+                  onChange={handleChange}
+                  value={form.program}
+                  required
+                >
+                  <option value="">Select a program</option>
+                  <option value="angaza">Angaza Program</option>
+                  <option value="soya">Soya Youth Program</option>
+                  <option value="mucuna">Mucuna Program</option>
+                </select>
+              </div>
+
+              <div className="col-12">
+                <button type="submit" >
+                  Register
+                </button>
+              </div>
+            </form>
           </div>
-
-          <select
-            className="w-full p-2 border rounded"
-            name="program"
-            onChange={handleChange}
-            value={form.program}
-            required
-          >
-            <option value="">Select a program</option>
-            <option value="angaza">Angaza Program</option>
-            <option value="soya">Soya Youth Program</option>
-            <option value="mucuna">Mucuna Program</option>
-          </select>
-
-          <button
-            type="submit"
-            className="md:col-span-2 bg-[##56c737] text-white py-2 rounded hover:bg-green-700 transition"
-          >
-            Register
-          </button>
-        </form>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Signup;
-

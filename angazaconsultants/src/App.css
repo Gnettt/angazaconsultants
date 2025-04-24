@@ -222,18 +222,7 @@ form select {
   justify-content: space-around;
 }
 
-.program-card {
-  width: 300px;
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-}
 
-.program-avatar {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
+.text-angaza-green {
+  color: #316c21 
 }
-

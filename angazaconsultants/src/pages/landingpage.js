@@ -5,59 +5,72 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   const handleExplore = () => {
-    navigate('/homepage');
+    navigate('/home');
   };
 
+  const primaryColor = '#316c21';
+
   return (
-    <div className="bg-white text-[#316c21] min-h-screen font-sans">
+    <div className="bg-white" style={{ color: primaryColor, fontFamily: 'sans-serif', minHeight: '100vh' }}>
       {/* Hero Section */}
-      <section className="bg-[#316c21] text-white text-center py-20 px-4">
-        <h2 className="text-4xl font-bold mb-4">Sowing Seeds for a Greener Future</h2>
-        <p className="text-lg mb-6 max-w-xl mx-auto">
+      <section className="py-5 text-center text-white" style={{ backgroundColor: primaryColor, padding: '8rem 1rem' }}>
+        <h2 className="display-4 fw-bold mb-3">Sowing Seeds for a Greener Future</h2>
+        <p className="lead mb-4 mx-auto" style={{ maxWidth: '40rem' }}>
           At <b>Angaza Consultants</b>, we empower farmers with sustainable agricultural solutions and support rural communities.
         </p>
         <button
           onClick={handleExplore}
-          className="bg-white text-[#316c21] px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
         >
           Explore
         </button>
       </section>
 
-     
-      <section id="about" className="py-16 px-6 text-center max-w-4xl mx-auto">
-        <h3 className="text-3xl font-semibold mb-4">Why Choose Angaza Consultants?</h3>
-        <p className="text-gray-700">
-          We offer innovative agricultural services and market access, helping farmers thrive while preserving the environment.
-        </p>
-      </section>
+      <div> {/* The main container for About and Services */}
+        <section id="about" className="py-5 px-3 text-center mx-auto" style={{ maxWidth: '60rem', padding: '4rem 1rem' }}>
+          <h3 className="h2 fw-semibold mb-3">Why Choose Angaza Consultants?</h3>
+          <p className="text-muted">
+            We offer innovative agricultural services and market access, helping farmers thrive while preserving the environment.
+          </p>
+        </section>
 
-      
-      <section id="services" className="py-16 bg-gray-50 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-3xl font-semibold mb-10">Our Services</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <h4 className="text-xl font-bold mb-2">Farm Consultancy</h4>
-              <p>
-                Angaza is an agri investment and agri-business advisory firm specialised in helping create world class farming and integrated agribusinesses across the value chain...
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <h4 className="text-xl font-bold mb-2">Value Addition</h4>
-              <p>
-                Angaza is committed to training, developing, and accelerating groups and SME's focused on commercial agriculture. By transforming their produce into high-demand...
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <h4 className="text-xl font-bold mb-2">Market Access</h4>
-              <p>
-                Angaza connects rural farmers to reliable markets through contract farming, ensuring fair prices, sustainable practices, and improved incomes.
-              </p>
+        <section id="services" className="py-5 bg-light px-3" style={{ padding: '4rem 1rem' }}>
+          <div className="container text-center" style={{ maxWidth: '75rem' }}>
+            <h3 className="h2 fw-semibold mb-4">Our Services</h3>
+            <div className="row row-cols-1 row-cols-md-3 g-4">
+              <div className="col">
+                <div className="card shadow rounded-3 h-100">
+                  <div className="card-body p-4">
+                    <h4 className="card-title h5 fw-bold mb-2">Farm Consultancy</h4>
+                    <p className="card-text">
+                      Angaza is an agri investment and agri-business advisory firm specialised in helping create world class farming and integrated agribusinesses across the value chain...
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col">
+                <div className="card shadow rounded-3 h-100">
+                  <div className="card-body p-4">
+                    <h4 className="card-title h5 fw-bold mb-2">Value Addition</h4>
+                    <p className="card-text">
+                      Angaza is committed to training, developing, and accelerating groups and SME's focused on commercial agriculture. By transforming their produce into high-demand...
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col">
+                <div className="card shadow rounded-3 h-100">
+                  <div className="card-body p-4">
+                    <h4 className="card-title h5 fw-bold mb-2">Market Access</h4>
+                    <p className="card-text">
+                      We connect farmers to profitable markets, ensuring their produce reaches the right buyers at the right time.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 };

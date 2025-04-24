@@ -7,6 +7,7 @@ import HomePage from './pages/homepage';
 import LoginPage from "./pages/loginpage";
 import SignupPage from "./pages/signuppage";
 import LandingPage from './pages/landingpage';
+import  'bootstrap/dist/css/bootstrap.min.css'; 
 import './App.css';
 
 function App() {

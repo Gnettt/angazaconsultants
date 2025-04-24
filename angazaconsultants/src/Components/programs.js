@@ -11,18 +11,29 @@ function Program() {
   }, []);
 
   return (
-    <div className="p-4 grid gap-4">
-      {programs.map((program, index) => (
-        <div key={index} style={{ border: "5px solid #ccc", padding: "20px", marginBottom: "20px", borderRadius: "8px" }} className="bg-white shadow-md rounded-lg p-4">
-         <img src={program.avatar} alt={program.name} className="program-avatar" style={{ width: "auto" }} />
-          <h2 className="text-xl font-bold">{program.name}</h2>
-          <p className="text-sm text-gray-500">{program.location}</p>
-          <p className="mt-2">{program.description}</p>
-          <p className="mt-2 text-sm">
-            <strong>Start:</strong> {program.startDate} | <strong>End:</strong> {program.endDate}
-          </p>
-        </div>
-      ))}
+    <div className="container py-4">
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {programs.map((program, index) => (
+          <div key={index} className="col">
+            <div className="card shadow rounded-3 border-5 border-light">
+              <div className="card-body p-3">
+                <img
+                  src={program.avatar}
+                  alt={program.name}
+                  className="img-fluid rounded mb-2"
+                  style={{ maxHeight: '200px', width: 'auto' }}
+                />
+                <h5 className="card-title fw-bold">{program.name}</h5>
+                <p className="card-subtitle mb-2 text-muted small">{program.location}</p>
+                <p className="card-text mt-2">{program.description}</p>
+                <p className="card-text mt-2 small">
+                  <strong>Start:</strong> {program.startDate} | <strong>End:</strong> {program.endDate}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
