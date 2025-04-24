@@ -1,10 +1,9 @@
-import Program from "../Components/programs";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   const [programs, setPrograms] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedProgram, setSelectedProgram] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:8000/programs")
@@ -21,55 +20,41 @@ function HomePage() {
   );
 
   return (
-    <div className="container-fluid">
-      <div className="row justify-content-center">
-        <div className="col-md-10 p-4">
-          <input
-            type="text"
-            placeholder="Search programs..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="form-control mb-4"
-          />
+    <div className="container my-5">
+      <input
+        type="text"
+        placeholder="Search programs..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="form-control mb-4"
+      />
 
-          {selectedProgram ? (
-            <div className="card mb-4 shadow rounded-3">
-              <div className="card-body">
-                <h2 className="card-title">{selectedProgram.name}</h2>
-                <img
-                  src={selectedProgram.avatar}
-                  alt={selectedProgram.name}
-                  className="img-fluid mb-3"
-                  style={{ maxWidth: "300px" }}
-                />
-                <p className="card-text">{selectedProgram.description}</p>
-                <p className="card-text">
-                  <strong>Location:</strong> {selectedProgram.location}
-                </p>
-                <p className="card-text">
-                  <strong>Start:</strong> {selectedProgram.startDate}
-                </p>
-                <p className="card-text">
-                  <strong>End:</strong> {selectedProgram.endDate}
-                </p>
-              </div>
-            </div>
-          ) : (
-            <p className="text-muted">Search for a program to view its details.</p>
-          )}
-
-          <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            {filteredPrograms.length > 0 ? (
-              filteredPrograms.map((program, index) => (
-                <div className="col" key={index}>
-                  <Program program={program} />
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {filteredPrograms.length > 0 ? (
+          filteredPrograms.map((program) => (
+            <div className="col" key={program.id}>
+              <Link
+                to={`/programs/${program.id}`}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <div className="card h-100 shadow-sm">
+                  <img
+                    src={program.avatar}
+                    alt={program.name}
+                    className="card-img-top"
+                    style={{ height: "200px", objectFit: "cover" }}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{program.name}</h5>
+                    <p className="card-text text-muted">{program.location}</p>
+                  </div>
                 </div>
-              ))
-            ) : (
-              <p>No programs match your search.</p>
-            )}
-          </div>
-        </div>
+              </Link>
+            </div>
+          ))
+        ) : (
+          <p>No programs match your search.</p>
+        )}
       </div>
     </div>
   );

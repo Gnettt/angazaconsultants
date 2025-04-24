@@ -5,7 +5,7 @@ function Program({ program }) {
     <div className="card shadow rounded-3 border-5 border-light h-100">
       <div className="card-body p-3">
         <img
-          src={program.avatar}
+          src={program.avatar_url}
           alt={program.name}
           className="img-fluid rounded mb-2"
           style={{ maxHeight: '200px', width: 'auto' }}
