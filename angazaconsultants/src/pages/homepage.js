@@ -1,6 +1,5 @@
 import Program from "../Components/programs";
 import React, { useEffect, useState } from "react";
-import Sidebar from "../Components/sidebar";
 
 function HomePage() {
   const [programs, setPrograms] = useState([]);
@@ -23,15 +22,8 @@ function HomePage() {
 
   return (
     <div className="container-fluid">
-      <div className="row">
-        {/* Sidebar */}
-        <div className="col-md-3 bg-light min-vh-100 p-3 border-end">
-          <Sidebar onProgramSelect={setSelectedProgram} />
-        </div>
-
-        {/* Main Content */}
-        <div className="col-md-9 p-4">
-          {/* Search Bar */}
+      <div className="row justify-content-center">
+        <div className="col-md-10 p-4">
           <input
             type="text"
             placeholder="Search programs..."
@@ -40,7 +32,6 @@ function HomePage() {
             className="form-control mb-4"
           />
 
-          {/* Selected Program Info */}
           {selectedProgram ? (
             <div className="card mb-4 shadow rounded-3">
               <div className="card-body">
@@ -52,16 +43,21 @@ function HomePage() {
                   style={{ maxWidth: "300px" }}
                 />
                 <p className="card-text">{selectedProgram.description}</p>
-                <p className="card-text"><strong>Location:</strong> {selectedProgram.location}</p>
-                <p className="card-text"><strong>Start:</strong> {selectedProgram.startDate}</p>
-                <p className="card-text"><strong>End:</strong> {selectedProgram.endDate}</p>
+                <p className="card-text">
+                  <strong>Location:</strong> {selectedProgram.location}
+                </p>
+                <p className="card-text">
+                  <strong>Start:</strong> {selectedProgram.startDate}
+                </p>
+                <p className="card-text">
+                  <strong>End:</strong> {selectedProgram.endDate}
+                </p>
               </div>
             </div>
           ) : (
-            <p className="text-muted">Select a program from the sidebar to view its details.</p>
+            <p className="text-muted">Search for a program to view its details.</p>
           )}
 
-          {/* Program Cards */}
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             {filteredPrograms.length > 0 ? (
               filteredPrograms.map((program, index) => (
@@ -80,4 +76,3 @@ function HomePage() {
 }
 
 export default HomePage;
-

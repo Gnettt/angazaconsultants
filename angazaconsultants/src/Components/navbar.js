@@ -15,8 +15,9 @@ style={{ height: "50px", marginRight: "15px" }}
 />
 <Link to="/home" style={{ margin: "10px" }}>Home</Link>
 <Link to="/program" style={{ margin: "10px" }}>Programs</Link>
-<Link to="/login" style={{ margin: "10px" }}>Login</Link>
 <Link to="/signup" style={{ margin: "10px" }}>Sign Up</Link>
+<Link to="/login" style={{ margin: "10px" }}>Login</Link>
+
 
 
 <ul style={{ listStyle: "none", display: "flex", gap: "15px", margin: 0 }}>
