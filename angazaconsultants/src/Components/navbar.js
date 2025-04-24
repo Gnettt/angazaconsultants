@@ -7,13 +7,14 @@ import logo from "../assets/angazalogo.png";
 function Navbar() {
 return (
 <nav >
-<div style={{ display: "flex", alignItems: "center" }}>
+<div style={{ display: "flex", alignItems: "center", textDecorationColor:"black"}}>
 <img
 src={logo}
 alt="Angaza Logo"
 style={{ height: "50px", marginRight: "15px" }}
 />
 <Link to="/home" style={{ margin: "10px" }}>Home</Link>
+<Link to="/program" style={{ margin: "10px" }}>Programs</Link>
 <Link to="/login" style={{ margin: "10px" }}>Login</Link>
 <Link to="/signup" style={{ margin: "10px" }}>Sign Up</Link>
 

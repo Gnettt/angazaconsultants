@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import ProgramCard from "../Components/ProgramCard"; // Assuming you have a component to display each program
+import ProgramCard from "../Components/ProgramCard";
 
 function SideBarPage() {
   const [programs, setPrograms] = useState([]);

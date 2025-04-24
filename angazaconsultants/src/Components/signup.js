@@ -69,7 +69,6 @@ const Signup = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-8 col-lg-6 bg-white p-4 rounded shadow">
-            <h2 className="mb-4">Sign Up for a Program</h2>
             <form onSubmit={handleSubmit} className="row g-3">
               <div className="col-12">
                 <input

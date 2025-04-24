@@ -82,6 +82,20 @@ nav ul li {
   justify-content: center;
 
 }
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
 
 footer {
   background-color: rgb(53, 93, 55);

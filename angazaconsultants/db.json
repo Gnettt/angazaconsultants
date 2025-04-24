@@ -8,6 +8,24 @@
       "repeatPassword": "666",
       "program": "Mucuna Loan Program",
       "city": "Location access denied"
+    },
+    {
+      "id": "b96d",
+      "fullnames": "Jeannette Derek",
+      "phonenumber": "1111",
+      "password": "222",
+      "repeatPassword": "222",
+      "program": "soya",
+      "city": "Location access denied"
+    },
+    {
+      "id": "bc8d",
+      "fullnames": "John Doe",
+      "phonenumber": "444",
+      "password": "555",
+      "repeatPassword": "555",
+      "program": "mucuna",
+      "city": "Location access denied"
     }
   ],
   "programs": [
@@ -17,7 +35,8 @@
       "description": "Founded on the principles of technology and product innovation, Angaza is collaborating with the Kenya Industrial Research and Development Institute (KIRDI) and supported by Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH to develop commercial products from the Mucuna pruriens bean. This initiative aims to create sustainable markets for Mucuna bean farmers while leveraging the crop’s significant soil improvement benefits. By establishing strong market demand, the program enhances farmer incomes and promotes soil quality, contributing to long-term agricultural sustainability and environmental resilience.",
       "location": "Nairobi",
       "startDate": "2025-01-01",
-      "endDate": "2025-12-31"
+      "endDate": "2025-12-31",
+      "id": "286f"
     },
     {
       "avatar": "/src/assets/avocados.png",
@@ -25,7 +44,8 @@
       "description": "Angaza Consultants is transforming avocado farming in Western Kenya by creating sustainable market access for farmers. In 2024, we distributed 4,000 Hass avocado seedlings and plan to sell 20,000+ seedlings in 2025. To support value addition, we are investing in an avocado oil processing facility. This initiative will boost farmer incomes, job creation, and agro-industrial growth. Additionally, byproducts will be converted into organic fertilizer and black soldier fly larvae for animal feed, promoting sustainability. Through training, partnerships, and agribusiness linkages, Angaza aims to establish Western Kenya as a leading avocado production hub.",
       "location": "Nairobi",
       "startDate": "2025-01-01",
-      "endDate": "2025-12-31"
+      "endDate": "2025-12-31",
+      "id": "d446"
     },
     {
       "avatar": "/src/assets/soya-bean.png",
@@ -33,7 +53,8 @@
       "description": "In partnership with the Youth in Sustainable Aquaculture (YISA) program, led by Farm Africa, Angaza is engaging youth in soybean contract farming. This five-year program, running from 2024 to 2029, targets six counties: Kilifi, Kakamega, Busia, Siaya, Kisumu, and Homabay. The soybeans produced are directed to fish feed manufacturers with the aim of improving the quality of locally manufactured feeds while reducing the feeding cost for fish in the lake region of Kenya. This initiative not only enhances profitability for fish farmers but also promotes sustainability across the aquaculture value chain, creating long-term economic and environmental benefits.",
       "location": "Nairobi",
       "startDate": "2025-01-01",
-      "endDate": "2025-12-31"
+      "endDate": "2025-12-31",
+      "id": "19b3"
     },
     {
       "avatar": "/src/assets/soya-bean.png",
@@ -41,7 +62,8 @@
       "description": "Driven by the goal of enabling contract farming and improving farmer access to credit, Angaza has partnered with Equity Bank of Kenya to empower farmers access credit for contract farming. By facilitating their transition to commercial farming, the initiative aims to equip these farmers with the tools to earn sustainable and decent incomes, fostering economic growth and empowerment in rural communities.",
       "location": "Nairobi",
       "startDate": "2025-01-01",
-      "endDate": "2025-12-31"
+      "endDate": "2025-12-31",
+      "id": "3ab5"
     }
   ]
 }
