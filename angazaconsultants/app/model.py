@@ -1,31 +1,36 @@
-from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
 
-db = SQLAlchemy()
+Base = declarative_base()
 
-class User(db.Model):
-    __tablename__ = 'users'
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String, nullable=False)
-    email = db.Column(db.String, nullable=False)
-    password = db.Column(db.String, nullable=False)
+class User(Base):
+    __tablename__ = "users"
     
-    enrollments = db.relationship('Enrollment', back_populates='user')
+    id = Column(Integer, primary_key=True)
+    username = Column(String, nullable=False)
+    email = Column(String, nullable=False)
+    password = Column(String, nullable=False)
+    
+    enrollments = relationship('Enrollment', back_populates='user')
 
-class Program(db.Model):
+class Program(Base):
     __tablename__ = 'programs'
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String, nullable=False)
-    description = db.Column(db.String)
-    duration = db.Column(db.Integer)
+    
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False)
+    description = Column(String)
+    duration = Column(Integer)
+    
+    enrollments = relationship('Enrollment', back_populates='program')
 
-    enrollments = db.relationship('Enrollment', back_populates='program')
-
-class Enrollment(db.Model):
+class Enrollment(Base):
     __tablename__ = 'enrollments'
-    id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    program_id = db.Column(db.Integer, db.ForeignKey('programs.id'))
-    enrollment_date = db.Column(db.String)
-
-    user = db.relationship('User', back_populates='enrollments')
-    program = db.relationship('Program', back_populates='enrollments')
+    
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('users.id'))
+    program_id = Column(Integer, ForeignKey('programs.id'))
+    enrollment_date = Column(String)
+    
+    user = relationship('User', back_populates='enrollments')
+    program = relationship('Program', back_populates='enrollments')
