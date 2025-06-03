@@ -22,7 +22,7 @@ function Program({ program }) {
 }
 
 useEffect(() => {
-  fetch("http://localhost:5000/programs")
+  fetch("http://localhost:3000/programs")
     .then((res) => res.json())
     .then(setPrograms);
 }, []);

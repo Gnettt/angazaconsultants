@@ -11,13 +11,13 @@ const ProgramPage = () => {
 
   useEffect(() => {
  
-    fetch("http://localhost:8000/programs")
+    fetch("http://localhost:3001/programs")
       .then((response) => response.json())
       .then((data) => setPrograms(data))
       .catch((err) => console.error("Error fetching programs:", err));
 
    
-    fetch(`http://localhost:8000/programs/${id}`)
+    fetch(`http://localhost:3001/programs/${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Program not found');

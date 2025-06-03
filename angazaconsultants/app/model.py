@@ -1,6 +1,10 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app, origins=["http://localhost:3001"])
 
 Base = declarative_base()
 
@@ -9,7 +13,7 @@ class User(Base):
     
     id = Column(Integer, primary_key=True)
     username = Column(String, nullable=False)
-    email = Column(String, nullable=False)
+    phonenumber = Column(String, nullable=False)
     password = Column(String, nullable=False)
     
     enrollments = relationship('Enrollment', back_populates='user')

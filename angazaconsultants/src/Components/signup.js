@@ -147,4 +147,29 @@ const Signup = () => {
   );
 };
 
+const handleSignup = async (formData) => {
+  try {
+    const response = await fetch('http://127.0.0.1:5000/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),  
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log('Signup success:', data);
+      
+    } else {
+      const errorData = await response.json();
+      console.error('Signup failed:', errorData);
+      
+    }
+  } catch (error) {
+    console.error('Error connecting to backend:', error);
+
+  }
+};
+
 export default Signup;
