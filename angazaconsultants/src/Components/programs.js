@@ -21,4 +21,10 @@ function Program({ program }) {
   );
 }
 
+useEffect(() => {
+  fetch("http://localhost:5000/programs")
+    .then((res) => res.json())
+    .then(setPrograms);
+}, []);
+
 export default Program;

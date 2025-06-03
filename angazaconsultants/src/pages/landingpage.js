@@ -5,7 +5,7 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   const handleExplore = () => {
-    navigate('/home');
+    navigate('/program');
   };
 
   const primaryColor = '#316c21';
